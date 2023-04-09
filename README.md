@@ -2,7 +2,7 @@
 
 This repo contains the source code for the ICLR 2023 paper: [Unified Detoxifying and Debiasing in Language Generation via Inference-time Adaptive Optimization](https://openreview.net/forum?id=FvevdI0aA_h). The code is largely based on the DExperts [repo](https://github.com/alisawuffles/DExperts), and the requirements follow those of the DExperts repo as well.
 
-The main algorithm of the UDDIA framework proposed in the paper can be found in the [uddia_generation.py](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/generation/uddia_generation.py). The essential hyperparameters have been set to the default configuration in the [main script](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/scripts/run_toxicity_experiment.py) of the toxicity experiments. 
+The main algorithm of the UDDIA-u framework proposed in the paper can be found in the [uddia_generation.py](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/generation/uddia_generation.py). The essential hyperparameters have been set to the default configuration in the [main script](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/scripts/run_toxicity_experiment.py) of the toxicity experiments. 
 
 Before generating, you need to prepare the prompts in the `prompts/` directory. We've also provided the 175 prompt pairs for the experiments in the Table 5 of our paper in the directory.
 
