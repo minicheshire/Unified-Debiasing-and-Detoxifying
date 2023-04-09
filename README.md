@@ -21,9 +21,9 @@ with the paths of the prompt dataset and the output directory. You can also run 
 
 The generations are evaluated by three means: fluency, toxicity, and bias:
 
-- For fluency, run the `eval_fluency.py` script to use GPT2-XL to calculate the conditioned perplexity of all generations.
-- For toxicity, run the `eval_toxicity.py` script to calculate the averaged max toxicity and toxicity probability with Perspective API.
-- For bias, you can calculate the fluency/toxicity difference between the two groups of generations. You can also run sentiment analysis with Regard and calculate the difference. The `evaluation_regard` directory contains the evaluation code: download the finetuned BERT checkpoint from [here](https://drive.google.com/file/d/1K3IXhoI1M55bOXNelJDBolt72uSlysnU/view?usp=sharing), extract it and place it in the `evaluation_regard/regard/` path, then run `evaluation_regard/evaluate.py`. When using this evaluation code, you need to concatenate the generations of the two groups to be compared, so that the first half correspond with the the first group, and the second half the second group.
+- For fluency, run the [`eval_fluency.py`](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/eval_fluency.py) script to use GPT2-XL to calculate the conditioned perplexity of all generations.
+- For toxicity, run the [`eval_toxicity.py`](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/eval_toxicity.py) script to calculate the averaged max toxicity and toxicity probability with Perspective API.
+- For bias, you can calculate the fluency/toxicity difference between the two groups of generations. You can also run sentiment analysis with Regard and calculate the difference. The [`evaluation_regard`](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/tree/main/evaluation_regard) directory contains the evaluation code: download the finetuned BERT checkpoint from [here](https://drive.google.com/file/d/1K3IXhoI1M55bOXNelJDBolt72uSlysnU/view?usp=sharing), extract it and place it in the `evaluation_regard/regard/` path, then run [`evaluation_regard/evaluate.py`](https://github.com/minicheshire/Unified-Debiasing-and-Detoxifying/blob/main/evaluation_regard/evaluate.py). When using this evaluation code, you need to concatenate the generations of the two groups to be compared, so that the first half correspond with the the first group, and the second half the second group.
 
 If you find this repository useful for your research, please cite our work:
 
