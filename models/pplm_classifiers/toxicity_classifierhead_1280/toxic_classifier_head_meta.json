@@ -1,0 +1,1 @@
+{"class_size": 2, "embed_size": 1280, "pretrained_model": "gpt2-large", "class_vocab": {"non_toxic": 0, "toxic": 1}, "default_class": 0}

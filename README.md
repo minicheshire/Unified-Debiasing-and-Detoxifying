@@ -1,2 +1,5 @@
-# Unified-Debiasing-and-Detoxifying
-Code for the ICLR 2023 paper: Unified Detoxifying and Debiasing in Language Generation via Inference-time Adaptive Optimization
+
+
+Source code for UDDIA-u. The development is based on https://github.com/alisawuffles/DExperts .
+
+Command: source run_uddia.sh
