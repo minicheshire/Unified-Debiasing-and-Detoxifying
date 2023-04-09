@@ -33,8 +33,8 @@ def uddia(prompts: pd.Series,
           p: float,            
           batch_size: int,
           class_label: int,
-          bf_lr: float,
-          bf_iter: int,
+          dt_lr: float,
+          dt_iter: int,
           isTop: bool,
           isMLP: bool,
           layer_tune_num: int,
@@ -47,7 +47,7 @@ def uddia(prompts: pd.Series,
     generator = UDDIAGeneration(model_name_or_path, device=0, layer_tune_num=layer_tune_num, isTop=isTop, isMLP=isMLP)
     generator.model.share_memory()
     generator.classifier.share_memory()
-    uddia_func = partial(generator.__call__, class_label=class_label, bf_lr=bf_lr, bf_iter=bf_iter, length=max_len, top_p=p, isTop=isTop, isMLP=isMLP, layer_tune_num=layer_tune_num, ppl_thres=ppl_thres, layer_tune_freq=layer_tune_freq)
+    uddia_func = partial(generator.__call__, class_label=class_label, dt_lr=dt_lr, dt_iter=dt_iter, length=max_len, top_p=p, isTop=isTop, isMLP=isMLP, layer_tune_num=layer_tune_num, ppl_thres=ppl_thres, layer_tune_freq=layer_tune_freq)
 
     # Repeat prompts
     prompts = prompts.repeat(num_samples)

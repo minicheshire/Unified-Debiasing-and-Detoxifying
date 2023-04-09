@@ -455,7 +455,7 @@ class UDDIAGeneration(Pipeline):
             # Redo mechanism
             while ppl > ppl_thres:
                 pert_gen_tok_text, ppl, bias_intervene_times = generate_text_uddia(
-                    dy_lr=dt_lr,
+                    dt_lr=dt_lr,
                     dt_iter=dt_iter,
                     original_bias=self.original_bias,
                     model=self.model,
